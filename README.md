@@ -11,10 +11,14 @@ Everything here is generalised.
 
 ## The problem
 
-External developers integrating with an API hit the same wall over and over:
+External sellers integrating with an API hit the similar wall over and over:
 signature mismatches, wrong parameter formats, webhook misconfiguration, "which
 endpoint do I use for X". Each question used to land on a PM or engineer via chat,
 got answered ad hoc, and the answer evaporated.
+
+Service level alignment
+Resource constraints on the PM or engineering side often result in delayed responses to feedback. 
+Delayed handling of integration-related inquiries directly translates to missed business opportunities.
 
 Goals for the bot:
 
