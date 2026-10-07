@@ -5,8 +5,9 @@ added an insight-memory feature.
 
 ## The insights sheet detour
 
-**What we built:** a `/save` command. After a thread was resolved, an internal user
-typed `/save`; the agent extracted `category | symptom keywords | error code |
+**What we built:** 
+a `/save` command. After a thread was resolved, an internal user typed `/save`; 
+the agent extracted `category | symptom keywords | error code |
 endpoint | root cause | fix | doc link` from the thread and appended a row to a
 spreadsheet. Before answering any new error question, the agent fetched the *entire*
 sheet and scanned it for a match.
@@ -23,7 +24,8 @@ sheet and scanned it for a match.
 - "Reply `Saved ✓` after appending" had no branch for a failed write, so the bot
   could claim success without checking the tool result.
 
-**What to do instead:** write to the learnt KB through the platform's native
+**What to do instead:** 
+write to the learnt KB through the platform's native
 mechanism; if you *must* keep a table, read it once into the KB, not on every turn.
 Put dedup and "nothing to save" checks in **code**, not in the prompt.
 
