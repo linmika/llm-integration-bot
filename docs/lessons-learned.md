@@ -66,8 +66,6 @@ Cheap to flip; nobody owned the checkbox.
 
 ## Secrets in agent code
 
-<!-- TODO(Mika): 這段在 token 輪換完成前先不要公開；輪換完再決定要不要保留「我們曾經這樣」的寫法 -->
-
 Rule-driven agents are usually generated from a step-by-step spec, and the spec is
 where people paste tokens. The literal then lands in the generated Python and from
 there in every config export, review transcript and debug log.
@@ -76,8 +74,6 @@ there in every config export, review transcript and debug log.
 are referenced by name. Rotate anything that has ever been pasted into a prompt.
 
 ## Ownership drift
-
-<!-- TODO(Mika): 這段隱含對同事流程的批評，公開前請確認你想不想留 -->
 
 A bot that lives a year gets created by one person, edited by another and forked
 by a third. Keep a one-line changelog in the agent description ("Removed X → Y

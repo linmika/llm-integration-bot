@@ -85,7 +85,7 @@ If asked for a developer / escalation summary:
 |------|----------------|
 | `[ADDITIONAL DETAILS REQUIRED]` prefix | The contract the orchestration code branches on. See [architecture §1](../docs/architecture.md#1-the-sentinel-contract). |
 | "Only links listed on page X" | Models generate realistic-looking doc URLs. Pinning an allow-list page in the KB was the only thing that stopped it. |
-| "Never translate code blocks" | Users ask in several languages; code must stay byte-identical to what they can paste back. <!-- TODO(Mika): 有實際看過翻譯壞掉的案例嗎？ --> |
+| "Never translate code blocks" | Users ask in several languages; code must stay byte-identical to what they can paste back. |
 | "Text only" | The delivery tool is text-only, so any image or file the model "attaches" never arrives. |
 | "Only when the user explicitly asks" for escalation | The first prompt version told the agent to escalate whenever it could not find an answer. Escalation is now a user decision (via the Yes/No loop) or an explicit request. |
 | Error categories (API clarification, signing, credentials, parameters, portal access, status push, webhook) | Fixed taxonomy shared with the log sheet so analytics stay consistent. Add to the prompt as a list if you want the model to classify. |

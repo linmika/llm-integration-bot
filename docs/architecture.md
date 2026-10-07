@@ -54,7 +54,6 @@ Why this works better than alternatives we tried:
   `{ "answer": string }` JSON schema so code never has to parse prose; the sentinel
   lives *inside* that string. A prefix the model must write as its first token is
   easier to enforce than a separate boolean field it must remember to set.
-  <!-- TODO(Mika): 如果曾試過 needs_more_info 這類 boolean 欄位、效果如何，可以在這裡補一句 -->
 - **It is human-readable.** The same prefix shows up in logs and in the internal
   channel, so a colleague scanning a thread sees instantly that the bot was blocked
   on missing details.
@@ -113,7 +112,6 @@ Design decisions worth copying:
   decision into the loop made escalation behaviour predictable.
 - **Exactly one retry.** The second attempt re-runs the same question against the
   agent before escalating.
-  <!-- TODO(Mika): 為什麼是 1 次而不是 2 次？如果有實際觀察（第二次答得更好/第三次沒差）補在這 -->
 
 - **Every wait has a timeout** and a single, friendly recovery message that tells
   the user how to restart (`/help`). Silence is the most common failure mode on
@@ -157,7 +155,6 @@ Lessons:
 - **Give the form-shaped requests a form.** The classifier prompt spells out the
   exact field list for each request type, so a small model can match on shape
   rather than meaning.
-  <!-- TODO(Mika): 表單格式是否有公告在 channel / onboarding guide？分類準確度有沒有量過？ -->
 - **The classifier must be able to say what it can't do.** Its prompt includes a
   "when asked about your capabilities, list exactly these three" clause so it does
   not improvise a fourth.
@@ -212,8 +209,6 @@ What the table is designed to answer without any extra tooling:
   up front.
 - Escalation rate → the bot's real coverage, as opposed to its self-reported one.
 
-<!-- TODO(Mika): 如果實際有拿這張表做過分析（週報、改文件），補一個具體例子會更有說服力 -->
-
 ## Prompt-level guardrails (both channels)
 
 Pulled out of the agent prompt because they apply to any support bot:
@@ -229,7 +224,6 @@ Pulled out of the agent prompt because they apply to any support bot:
   (signature, timestamp, nonce, app id), request body, response body, and the
   signature-generation code if it is a signing issue. Asking for all five in one
   message avoids a round-trip per item.
-  <!-- TODO(Mika): 有數字的話（平均來回次數 before/after）放這裡 -->
 
 The full generalised prompt is in
 [`prompts/support-agent.template.md`](../prompts/support-agent.template.md).
