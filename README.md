@@ -7,8 +7,7 @@ partners integrating against a logistics **Open API** (order creation, tracking,
 shipping labels, webhooks). Written from the product-owner seat: what the bot had to
 do, how the pieces fit, and what I would do differently.
 
-Everything here is generalised. No company names, IDs, credentials or internal
-documents — only the reusable patterns.
+Everything here is generalised. 
 
 ## The problem
 
